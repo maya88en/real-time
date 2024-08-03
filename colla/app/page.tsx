@@ -5,6 +5,14 @@ import { useEffect, useState } from "react";
 import { getUserSession } from "./services/user.service";
 import { supabase } from "./lib/initSupabase";
 
+export const dynamic = 'auto'
+export const dynamicParams = true
+
+export const fetchCache = 'auto'
+export const runtime = 'nodejs'
+export const preferredRegion = 'auto'
+export const maxDuration = 5
+
 export default function Home() {
   const [session, setSession] = useState<any>();
   const [isAuthenticating, setIsAuthenticating] = useState<boolean>(true);
@@ -90,6 +98,7 @@ export default function Home() {
     </main>
   );
 }
+ 
 
 
 // import Image from "next/image";
