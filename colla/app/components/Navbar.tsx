@@ -24,7 +24,7 @@ const Navbar = (props: Props) => {
             href="/"
             className="text-lg font-semibold md:text-2xl text-blue-500"
           >
-            Guess Draw
+            Devabollators
           </a>
           {shouldShowRoomName && (
             <div className="hidden md:flex  gap-2">
