@@ -4,7 +4,7 @@ import { updateRoomDrawing } from "@/app/services/drawing-room.service";
 import { supabase } from "@/app/lib/initSupabase";
 import { fetchUserById, getUserSession } from "@/app/services/user.service";
 import { DrawingPen } from "./BoardContainer";
-import Script from "next/script";
+
 
 
 
@@ -243,14 +243,7 @@ function WhiteBoard(props: BoardProps) {
           <canvas className="w-full h-full" id="board"></canvas>
         </div>
       </div>
-    <br></br>
-    {
-            <div>hello everyone
-            <Script id="gem">
-            {``}
-        </Script>
-        </div>
-       }
+    
     </div>
     
   );

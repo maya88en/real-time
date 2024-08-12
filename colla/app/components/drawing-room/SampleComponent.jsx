@@ -4,7 +4,7 @@ import React, {useEffect} from 'react';
 const SampleComponent = () => {
   useEffect(() => {
     window.localStorage.foo = "bar";
-    
+
 const typingForm = document.querySelector(".typing-form");
 const chatContainer = document.querySelector(".chat-list");
 // const suggestions = document.querySelectorAll(".suggestion");
@@ -16,17 +16,12 @@ let userMessage = null;
 let isResponseGenerating = false;
 
 // API configuration
-const API_KEY = process.env.API_KEY; // Your API key here
+const API_KEY = process.env.API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
 
 // Load theme and chat data from local storage on page load
   const loadDataFromLocalstorage = () => {
   const savedChats = localStorage.getItem("saved-chats");
-//   const isLightMode = (localStorage.getItem("themeColor") === "light_mode");
-
-  // Apply the stored theme
-//   document.body.classList.toggle("light_mode", isLightMode);
-//   toggleThemeButton.innerText = isLightMode ? "dark_mode" : "light_mode";
 
   // Restore saved chats or clear the chat container
   chatContainer.innerHTML = savedChats || '';
@@ -98,7 +93,7 @@ const generateAPIResponse = async (incomingMessageDiv) => {
 }
 
 const html = `<div class="message-content">
-                  <img class="avatar" src="images/gemini.svg" alt="Gemini avatar">
+                  
                   <p class="text"></p>
                   <div class="loading-indicator">
                     <div class="loading-bar"></div>
@@ -136,7 +131,7 @@ const handleOutgoingChat = () => {
   isResponseGenerating = true;
 
   const html = `<div class="message-content">
-                  <img class="avatar" src="images/user.jpg" alt="User avatar">
+                  
                   <p class="text"></p>
                 </div>`;
 
@@ -150,14 +145,6 @@ const handleOutgoingChat = () => {
   setTimeout(showLoadingAnimation, 500); // Show loading animation after a delay
 }
 
-//Toggle between light and dark themes
-
-// toggleThemeButton.addEventListener("click", () => {
-//   const isLightMode = document.body.classList.toggle("light_mode");
-//   localStorage.setItem("themeColor", isLightMode ? "light_mode" : "dark_mode");
-//   toggleThemeButton.innerText = isLightMode ? "dark_mode" : "light_mode";
-// });
-
 // Delete all chats from local storage when button is clicked
 window.onload=function(){
 deleteChatButton.addEventListener("click", () => {
@@ -167,15 +154,6 @@ deleteChatButton.addEventListener("click", () => {
   }
 });}
 
-// Set userMessage and handle outgoing chat when a suggestion is clicked
-// suggestions.forEach(suggestion => {
-//   suggestion.addEventListener("click", () => {
-//     userMessage = suggestion.querySelector(".text").innerText;
-//     handleOutgoingChat();
-//   });
-// });
-
-// Prevent default form submission and handle outgoing chat
 typingForm.addEventListener("submit", (e) => {
   e.preventDefault(); 
   handleOutgoingChat();
@@ -185,8 +163,7 @@ loadDataFromLocalstorage();
 });
     return (           
       <>
-            <div>hello everyone </div>
-            {/* <p id="demo"></p> */}
+            
             <div class="chat-list"></div>
 
   // Typing Area
@@ -197,7 +174,7 @@ loadDataFromLocalstorage();
         <button id="send-message-button" class="icon material-symbols-rounded">send</button>
       </div>
       <div class="action-buttons">
-        // <span id="theme-toggle-button" class="icon material-symbols-rounded">light_mode</span> 
+        
         <span id="delete-chat-button" class="icon material-symbols-rounded">delete</span>
       </div>
     </form>

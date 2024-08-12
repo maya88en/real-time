@@ -1,32 +1,5 @@
-// import ReactDOM from 'react-dom';
-
-// ReactDOM.render(
-//     <>
-//         <head>
-//             <style>// importing css
-//                 {`
-//           body {
-//             margin: 0;
-//             background-color: aqua;
-//           }
-//         `}
-//             </style>
-//         </head>
-//         <body>
-//             <h1 style={{
-//                 borderRadius: '20px',
-//                 backgroundColor: 'rgb(251, 141, 196)',
-//                 textAlign: 'center',
-//                 marginTop: '100px'
-//             }}>hello Geek!!</h1>
-//         </body>
-//     </>,
-//     document.getElementById("root")
-// );
-
 // pages/index.js
 import dynamic from "next/dynamic";
-import SampleComponent from "./SampleComponent"
 
 const DynamicComponent = dynamic(
   () => import("../components/SampleComponent"),
@@ -36,20 +9,11 @@ const DynamicComponent = dynamic(
 );
 
 const Index = () => {
-  // function myFunction(p1, p2) {
-  //   return p1 * p2;
-  // }
-  
-  // let result = myFunction(5, 3);
-  // document.getElementById("demo").innerHTML = result;
-  
-       
+      
   return (
     <>
       <div>
         <h1>Hello world!</h1>
-        
-        {/* <DynamicComponent /> */}
       </div>
     </>
   );
