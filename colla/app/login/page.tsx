@@ -18,7 +18,7 @@ const LoginPage = () => {
     const { data, error } = await supabase.auth.signInWithOtp({
       email: emailAddress,
       options: {
-        emailRedirectTo: window.location.origin,
+        emailRedirectTo: "https://real-time-70brlid3j-mayas-projects-6e9de0a7.vercel.app/",
       },
     });
 
@@ -41,7 +41,7 @@ const LoginPage = () => {
       onSubmit={authenticateUser}
       className="flex flex-col gap-3 justify-center items-center h-screen max-w-lg mx-auto"
     >
-      <label>Login with magic link 🧙🏽‍♂️</label>
+      <label>Login with devabollator link 🧙🏽‍♂️</label>
       <input
         type="text"
         placeholder="Enter email address"
@@ -59,7 +59,7 @@ const LoginPage = () => {
           ? "Token sent...please check your email address"
           : isLoading
             ? "One moment please..."
-            : "Send magic link"}
+            : "Send devabollator link"}
       </button>
     </form>
   );

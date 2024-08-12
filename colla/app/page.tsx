@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import { getUserSession } from "./services/user.service";
 import { supabase } from "./lib/initSupabase";
+import Script from 'next/script';
+
+
 
 export const dynamic = 'auto'
 export const dynamicParams = true
@@ -14,6 +17,9 @@ export const preferredRegion = 'auto'
 export const maxDuration = 5
 
 export default function Home() {
+
+  
+  
   const [session, setSession] = useState<any>();
   const [isAuthenticating, setIsAuthenticating] = useState<boolean>(true);
 
@@ -93,6 +99,7 @@ export default function Home() {
 
   return (
     <main>
+      <Script />
       <Navbar session={session} />
       <DashboardBody session={session} />;
     </main>

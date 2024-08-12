@@ -4,6 +4,7 @@ import { StreamChat } from "stream-chat";
 const STREAM_CHAT_API_KEY = process.env.NEXT_PUBLIC_STREAM_CHAT_API_KEY!;
 const STREAM_CHAT_SECRET_KEY = process.env.NEXT_PUBLIC_STREAM_CHAT_SECRET_KEY!;
 
+
 export const dynamic = 'auto'
 export const dynamicParams = true
 export const revalidate = false
@@ -30,7 +31,9 @@ export async function POST(req: NextRequest) {
     const streamChat = new StreamChat(
       STREAM_CHAT_API_KEY,
       STREAM_CHAT_SECRET_KEY,
+      
     );
+
 
     // Creating a token for the user
     const token = streamChat.createToken(userId);

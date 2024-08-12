@@ -6,6 +6,8 @@ import { RoomCard, RoomCardSkeleton } from "./RoomCard";
 import NewRoomModal from "./NewRoomModal";
 import { fetchUserDrawingRooms } from "@/app/services/drawing-room.service";
 import Header from "./Header";
+import Script from "next/script";
+
 
 export type RoomType = {
   id: string;
@@ -93,7 +95,19 @@ const DashboardBody = (props: Props) => {
         loadUserDrawingRooms={loadUserDrawingRooms}
         session={session}
       />
+      
+      <Script id="inline-script" strategy="beforeInteractive">
+        {`
+          
+
+        `}
+      </Script>
+    {/* </> */}
+
+
+      
     </div>
+    
   );
 };
 

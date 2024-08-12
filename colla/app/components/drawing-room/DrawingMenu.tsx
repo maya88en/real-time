@@ -1,9 +1,11 @@
+
 import React, { useState } from "react";
 import { DrawingPen } from "./BoardContainer";
 
+
 type DrawingMenuProp = {
   drawingPen: DrawingPen;
-  setDrawingPen: Function;
+  setDrawingPen: React.Dispatch<React.SetStateAction<DrawingPen>>;
 };
 
 const DEFAULT_COLORS = ["#000000", "#FF0000", "#00FF00", "#0000FF", "#FFFF00"];
@@ -143,6 +145,9 @@ const DrawingMenu = (props: DrawingMenuProp) => {
           />
         </svg>
       </div>
+      
+       
+      
     </div>
   );
 };

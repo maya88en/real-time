@@ -9,6 +9,9 @@ import BoardContainer from "@/app/components/drawing-room/BoardContainer";
 import VideoWrapper from "@/app/components/videos/VideoWrapper";
 import VideoLayout from "@/app/components/videos/VideoLayout";
 
+
+
+
 const DrawingRoomPage = () => {
   const { roomId } = useParams();
   const [owner, setOwner] = useState<any | null>(null);
@@ -39,8 +42,14 @@ const DrawingRoomPage = () => {
     });
   }, []);
 
+  
+
   return (
+
+    
+    
     <main>
+      
       <Navbar
     session={session}
     owner={owner}

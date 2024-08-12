@@ -1,5 +1,6 @@
 import React from "react";
 
+
 type Props = { session: any; setShowCreateRoomModal: Function };
 
 const Header = (props: Props) => {
@@ -29,7 +30,12 @@ const Header = (props: Props) => {
         </svg>
         <span>New Room</span>
       </button>
+      <br></br>
+      
+     
+      
     </section>
+
   );
 };
 

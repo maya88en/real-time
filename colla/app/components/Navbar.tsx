@@ -1,4 +1,5 @@
 import React from "react";
+import Script from 'next/script';
 
 type Props = {
   session: any;
@@ -15,6 +16,8 @@ const Navbar = (props: Props) => {
   const shouldShowRoomName = isRoom && room?.name;
   const shouldShowRoomVisibilityBadge = isRoom && !isLoadingRoom;
   const isRoomOwner = owner?.id === session?.user.id;
+
+
 
   return (
     <nav className="bg-white z-20 border border-slate-200 w-full p-4">
@@ -97,7 +100,11 @@ const Navbar = (props: Props) => {
           />
         </section>
       </div>
+      
     </nav>
+    
+
+
   );
 };
 
