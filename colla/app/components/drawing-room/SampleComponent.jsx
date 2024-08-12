@@ -4,12 +4,7 @@ import React, {useEffect} from 'react';
 const SampleComponent = () => {
   useEffect(() => {
     window.localStorage.foo = "bar";
-    // function myFunction(p1, p2) {
-    //   return p1 * p2;
-    // }
-    // let result = myFunction(15, 3);
-    // document.getElementById("demo").innerHTML = result
-
+    
 const typingForm = document.querySelector(".typing-form");
 const chatContainer = document.querySelector(".chat-list");
 // const suggestions = document.querySelectorAll(".suggestion");
@@ -21,7 +16,7 @@ let userMessage = null;
 let isResponseGenerating = false;
 
 // API configuration
-const API_KEY = "AIzaSyCr6HXBJ1YzpAfYFebTsixjO71aaXrwpTE"; // Your API key here
+const API_KEY = process.env.API_KEY; // Your API key here
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
 
 // Load theme and chat data from local storage on page load
