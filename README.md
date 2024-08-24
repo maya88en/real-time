@@ -1,3 +1,16 @@
+## Login LINK:
+https://real-time-mzlw7ocxw-mayas-projects-6e9de0a7.vercel.app/login
+
+## Dashboard LINK
+https://real-time-mzlw7ocxw-mayas-projects-6e9de0a7.vercel.app/
+
+
+## Photo for API working:
+<img width="947" alt="localhost working with gemini" src="https://github.com/user-attachments/assets/e65c94eb-9b8a-4534-bb81-f15268079203">
+
+
+
+
 ## A real-time collaborative whiteboard
 ## Next.js Typscript
 
