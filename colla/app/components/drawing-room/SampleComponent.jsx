@@ -1,5 +1,6 @@
 // components/SampleComponent.js
 import React, {useEffect} from 'react';
+// require('dotenv').config({path: '.env'});
 
 const SampleComponent = () => {
   useEffect(() => {
@@ -171,7 +172,7 @@ loadDataFromLocalstorage();
     <form action="#" class="typing-form">
       <div class="input-wrapper">
         <input type="text" placeholder="Enter a prompt here" class="typing-input" required />
-        <button id="send-message-button" class="icon material-symbols-rounded">send</button>
+        <button id="send-message-button" class="icon material-symbols-rounded">ok</button>
       </div>
       <div class="action-buttons">
         

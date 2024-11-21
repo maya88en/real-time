@@ -18,7 +18,7 @@ const LoginPage = () => {
     const { data, error } = await supabase.auth.signInWithOtp({
       email: emailAddress,
       options: {
-        emailRedirectTo: "https://real-time-70brlid3j-mayas-projects-6e9de0a7.vercel.app/",
+        emailRedirectTo: "https://real-time-mzlw7ocxw-mayas-projects-6e9de0a7.vercel.app/",
       },
     });
 
